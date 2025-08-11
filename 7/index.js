@@ -7,6 +7,11 @@ const cart = [
 
 function getTotalPrice(cartArray) {
   // 이곳에 코드를 작성합니다.
+  let price = 0;
+  for (let i = 0; i < cartArray.length; i++) {
+    price = cartArray[i].price + price
+  }
+  return price
 }
 
 console.log(getTotalPrice(cart)); // 150000이 출력되어야 함
